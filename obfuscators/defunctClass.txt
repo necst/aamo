@@ -1,0 +1,29 @@
+.class public final L*ClassName*;
+.super Ljava/lang/Object;
+.source "*SourceName*"
+
+
+# direct methods
+.method public static OFLog(Ljava/lang/String;Ljava/lang/String;)V
+    .registers 2
+    .parameter "tag"
+    .parameter "msg"
+
+    .prologue
+    .line 28
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 29
+    return-void
+.end method
+
+.method public static *MethodName*()V
+    .locals 2
+    const-string v0, "*String1*"
+    const-string v1, "*String2*"
+
+    .prologue
+    invoke-static {v0, v1}, L*ClassName*;->OFLog(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
