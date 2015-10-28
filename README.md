@@ -6,6 +6,45 @@ applications. We assume that the original application can be disassembled into
 Smali.
 
 
+Usage
+-----
+
+    $ mkdir dir_with_apks_to_obfuscate/     # fill the dir with some APKs
+    $ vim obfuscators/obfuscators.py
+
+Set the `obfuscator_to_apply` variable to define the list of obfuscators you
+want to apply. For example:
+
+    obfuscator_to_apply = [
+        'Resigned',
+        'Alignment',
+        'Rebuild',
+        'Fields',
+        'Debug',
+        'Indirections',
+        'Defunct',
+        'StringEncrypt',
+        'Renaming',
+        'Reordering',
+        'Goto',
+        'ArithmeticBranch',
+        'Nop',
+        'Asset',
+        'Intercept',
+        'Raw',
+        'Resource',
+        'Lib',
+        'Restring',
+        'Manifest',
+        'Reflection']
+
+You can choose a subset of obfuscators (recommended).
+
+    $ python obfuscators/obfuscators.py
+
+Enjoy your obfuscated APKs.
+
+
 Obfuscation Operators
 ---------------------
 
@@ -39,6 +78,12 @@ We currently support:
   * Data encryption (strings)
 
 
+Bugs
+----
+
+There might be plenty of bugs. Feel free to fork and send us pull requests!
+
+
 Contributors
 ------------
 
@@ -50,8 +95,6 @@ Contributors
 Support
 -------
 
-AAMO is supported by the [FACE][1] research project, under the FIRB 2013
-funding program of the Italian Ministry of University and Research.
-
-
-[1]:  http://www.face-project.it        “FACE: Formal Avenue for Chasing malwarE”
+AAMO is supported by the [FACE](http://www.face-project.it) research project,
+under the FIRB 2013 funding program of the Italian Ministry of University and
+Research (grant agreement N. RBFR13AJFT).
